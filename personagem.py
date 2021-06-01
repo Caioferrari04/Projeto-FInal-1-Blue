@@ -39,7 +39,7 @@ class Personagem():
             self.__fome += ch
         else:
             print('Você está cheio!')
-            self.__fome -= ch
+            self.__fome -= 5
 
     def fomeEx(self): # Metodo dedicado para exibir status de fome
         if self.__fome >= 12:
@@ -59,9 +59,9 @@ class Personagem():
         if self.contusao == True:
             print('Você está dolorido, e seu machucado não está melhorando...')
         if self.__saude >= 12:
-            return f'Você está se sentindo ótimo!'
+            return f'Você não tem machucados.'
         elif self.__saude >= 8:
-            return f'Você não está se sentindo muito bem.'
+            return f'Você tem alguns machucados.'
         elif self.__saude >= 4:
             return f'Você não deveria estar vazando por ai! Procure se tratar.'
         elif self.__saude >= 1:
@@ -71,7 +71,7 @@ class Personagem():
 
     def energiaEx(self,): # Metodo dedicado para exibir status de energia
         if self.__energia >= 140:
-            return 'Você está com muita energia.'
+            return 'Você não está cansado.'
         elif self.__energia >= 90:
             return 'Você está ficando cansado.'
         elif self.__energia >= 40:
@@ -208,11 +208,11 @@ class Personagem():
         os.system('cls')
         if self.contusao == False or self.enjoo == False:
             self.set_energia(6969)  # Resetando energia ao fim do dia
-            self.set_fome(-5) 
+            self.set_fome(-3) 
             self.set_saude(-2) # -1 pois set_saude usa -=, invertendo a operação para soma  
         else:
             self.set_energia(420420) # Resetando energia ao fim do dia
-            self.set_fome(-5)
+            self.set_fome(-3)
 
     def saudavel(self): # Metodo dedicado para tratar ferimentos
         os.system('cls')

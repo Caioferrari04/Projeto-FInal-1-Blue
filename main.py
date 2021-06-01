@@ -2,12 +2,23 @@
 # Sobreviver caçando, bebendo água, dormindo, etc
 from personagem import Personagem  # Importando os objetos;
 from relogio import Relogio
+from time import sleep
 
 if (__name__ == "__main__"):
     persona = Personagem(10, 200, 15)  # Instanciando o personagem
     relogio = Relogio()  # Instanciando o tempo
     resultado = 0
-    print('Bem vindo ao The Ilha; Sobreviva por 7 dias enquanto aguarda o resgate!')
+    print('-=' * 30)
+    print('Bem vindo ao The Ilha;')
+    print('-=' * 30)
+    sleep(3)
+    print('Você está fazendo uma viagem de negócios, num jatinho fretado por sua empresa.')
+    print('Porém, no meio do trajeto, uma tempestade horrivel se forma e acaba derrubando seu avião, \nque cai em uma ilha no meio do oceano.')
+    sleep(3)
+    print('Por algum milagre, você sobrevive a queda (o piloto não teve a mesma sorte), e agora,')
+    print('você deverá sobreviver por 7 dias nessa ilha, que é o tempo necessário para sua empresa rastrear o local da queda e enviar o resgate.')
+    sleep(3)
+    print('Boa sorte, e tente não morrer!"')
     print('Cace, ou procure por frutas, e evite morrer.')
     while True:  # While infinito para repetir quantas vezes quiser
         print('-=' * 30)

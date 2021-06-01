@@ -125,10 +125,10 @@ class Personagem():
                     self.set_saude(3)
                     self.set_energia(35)
                     return 180
-            elif randint(0,101) <= 70: # Sortudo, não aconteceu nada. 70% de chance
+            elif randint(0,101) <= 50: # Sortudo, não aconteceu nada. 50% de chance
                 print('Você não encontrou nada! Está escuro demais!')
                 return 100
-            elif randint(0,101) <= 90: # 20% de chance
+            elif randint(0,101) <= 90: # 40% de chance
                 print('Você ouve um rugido... uma puma está indo atrás de você!')
                 self.set_fome(-3)
                 self.set_saude(5)
@@ -171,6 +171,10 @@ class Personagem():
                         print('Você vomita enlouquecidamente.')
                         self.set_energia(10)
                         return 70
+                    else:
+                        print('Você decide não comer a fruta.')
+                        self.set_fome(-1)
+                        return 60 
                 else: # 20% de chande de achar um urso.
                     print(
                         'Você está colhendo frutas tranquilamente, então você ouve um barulho.\nUm urso resolveu catar frutar também!\n CORRA!!!')
@@ -179,10 +183,10 @@ class Personagem():
                     self.set_saude(3)
                     self.set_energia(15)
                     return 180
-            elif randint(0,101) <= 70: # Sortudo. 70% de chance.
+            elif randint(0,101) <= 50: # Sortudo. 50% de chance.
                 print('Você não encontrou nada! Está escuro demais!')
                 return 100
-            elif randint(0,101) <= 90: # 20% de chance
+            elif randint(0,101) <= 90: # 40% de chance
                 print('Você ouve um rugido... uma puma está indo atrás de você!')
                 self.set_fome(-3)
                 self.set_saude(5)
@@ -243,10 +247,10 @@ class Personagem():
                 self.set_energia(15)
                 self.set_fome(-1)
                 return 30
-        elif randint(0,101) <= 70: # Sortudo. 70% de chance.
+        elif randint(0,101) <= 50: # Sortudo. 50% de chance.
             print('Você não encontrou nada! Está escuro demais!')
             return 100
-        elif randint(0,101) <= 90: # 20% de chance.
+        elif randint(0,101) <= 90: # 40% de chance.
             print('Você ouve um rugido... uma puma está indo atrás de você!')
             self.set_fome(-3)
             self.set_saude(5)

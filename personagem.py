@@ -229,16 +229,19 @@ class Personagem():
             if randint(0, 300) <= 75 or randint(0, 300) > 225: # 50% de chance
                 print('Você não encontra nada.')
                 self.set_energia(15)
+                self.set_fome(-1)
                 return 30
             elif randint(0, 300) > 75 and randint(0, 300) <= 150: # 25% de chance
                 print('Você encontrou um kit de primeiros socorros!')
                 self.kit += 1
                 self.set_energia(15)
+                self.set_fome(-1)
                 return 30
             else: # 25% de chance
                 print('Você encontrou uma caixa com medicamentos!')
                 self.medicamento += 1
                 self.set_energia(15)
+                self.set_fome(-1)
                 return 30
         elif randint(0,101) <= 70: # Sortudo. 70% de chance.
             print('Você não encontrou nada! Está escuro demais!')
